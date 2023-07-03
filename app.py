@@ -17,5 +17,5 @@ def add_inputs():
     y = int(request.form['y'] or 0)
     add.apply_async(args=[x, y])
     flash("Your addition job has been submitted.")
-    print("APP.PY TEST MESSAGE)
+    print("APP.PY TEST MESSAGE")
     return redirect('/')
