@@ -7,7 +7,7 @@ logger = get_task_logger(__name__)
 
 
 @app.task
-def add(x, y):
+def add(x, y, z):
     logger.info(f'Adding {x} + {y}')
     print("FROM TASKS MESSAGE")
-    return x + y
+    return x + y + z
