@@ -15,6 +15,6 @@ def main():
 def add_inputs():
     x = int(request.form['x'] or 0)
     y = int(request.form['y'] or 0)
-    add.delay(x, y)
+    add.apply_async(args=[x, y])
     flash("Your addition job has been submitted.")
     return redirect('/')
